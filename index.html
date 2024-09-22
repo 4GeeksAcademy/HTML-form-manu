@@ -1,87 +1,115 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Formulario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <div class="container my-3">
-        <div class="card text-start">
-            <div class="card-header">
-                <h3>Payment form example</h3>
-            </div>
-            <div class="card-body">
-                <div class="alert alert-danger" role="alert">
-                    Some fields are missing
-                </div>
-                <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-md-4">
-                        <label for="validationCustom01" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom02" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustomUsername" class="form-label">Username</label>
-                        <div class="input-group has-validation">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="validationCustomUsername"
-                                aria-describedby="inputGroupPrepend" required>
-                            <div class="invalid-feedback">
-                                Please choose a username.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">City</label>
-                        <input type="text" class="form-control" id="validationCustom03" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid city.
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">State</label>
-                        <select class="form-select" id="validationCustom04" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>...</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid state.
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom05" class="form-label">Zip</label>
-                        <input type="text" class="form-control" id="validationCustom05" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid zip.
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="card-footer text-body-secondary">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+  <div class="container m-auto mt-4 p-0 border">
+    <form class="needs-validation " novalidate>
+      <div class="col-12 border-bottom bg-light">
+        <h3 class="m-0 py-2 px-3">Payment form example</h3>
+      </div>
+      <div class="row  my-3 mx-1 p-2">
+        <div class="col-md-12 position-relative">
+          <div class="alert p-2 alert-danger" role="alert">
+            Some fields are missing
+          </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+        <div class="col-md-5  my-2 position-relative">
+          <label for="validationTooltip" class="form-label">Card #</label>
+          <input type="text" class="form-control" id="validationTooltip" placeholder="XXXXXXXXXXXXXXXX" required>
+        </div>
+        <div class="col-md-4  my-2 position-relative">
+          <label for="validationTooltip" class="form-label">CVC #</label>
+          <input type="text" class="form-control" id="validationTooltip" placeholder="0000" required>
+        </div>
+        <div class="col-md-3 my-2 position-relative">
+          <label for="validationTooltip" class="form-label">Amount</label>
+          <div class="input-group">
+            <div class="input-group-prepend rounded-left">
+              <div class="input-group-text "><b>$</b></div>
+            </div>
+            <input type="text" class="form-control" id="validationTooltip">
+          </div>
+        </div>
+        <div class="col-md-6 my-2 position-relative">
+          <label for="validationTooltip" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationTooltip" required>
+        </div>
+        <div class="col-md-6  my-2 position-relative">
+          <label for="validationTooltip" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationTooltip" required>
+        </div>
+        <div class="col-md-6  my-2 position-relative">
+          <label for="validationTooltip" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationTooltip" required>
+        </div>
+        <div class="col-md-3  my-2 position-relative">
+          <label for="validationTooltip" class="form-label">State</label>
+          <select class="form-select" id="validationTooltip" required>
+            <option selected disabled value="">Pick a state</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-3  my-2 position-relative">
+          <label for="validationTooltip" class="form-label">Postal Code</label>
+          <input type="text" class="form-control" id="validationTooltip" required>
+        </div>
+        
+        <div class="col-md-6 my-2 position-relative">
+          <div class="col-md-3 d-inline">
+            <div class="col-md-12"><label for="validationTooltip" class="form-label">We accept:</label></div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">
+                <i class="fa-brands fa-cc-mastercard fa-xl"></i>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">
+                <i class="fa-brands fa-cc-visa fa-xl"></i>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">
+                <i class="fa-brands fa-cc-diners-club fa-xl"></i>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">
+                <i class="fa-brands fa-cc-visa fa-xl"></i>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-2 position-relative">
+          <label for="validationTooltip" class="form-label">Message</label>
+          <textarea class="form-control" rows="3"></textarea>
+          <small class="form-text text-muted">Add any notes here.</small>
+        </div> 
+      </div>
+      <div class="col-12 bg-light border-top p-2 d-flex justify-content-end">
+        <button class="btn btn-secondary ml-auto" type="submit">Cancel</button>
+        <button class="btn btn-primary ms-2" type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
 </body>
-
 </html>
